@@ -3,7 +3,7 @@
 
 #include "unicorn/platform.h"
 
-typedef void (*delete_fn)(void *data);
+typedef void (*delete_fn_t)(void *data);
 
 struct list_item {
     struct list_item *next;
@@ -12,7 +12,7 @@ struct list_item {
 
 struct list {
     struct list_item *head, *tail;
-    delete_fn deletefn;
+    delete_fn_t delete_fn;
 };
 
 // create a new list
