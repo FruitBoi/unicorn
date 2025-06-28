@@ -12,7 +12,7 @@ struct list_item {
 
 struct list {
     struct list_item *head, *tail;
-    delete_fn delete_fn;
+    delete_fn deletefn;
 };
 
 // create a new list
